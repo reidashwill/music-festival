@@ -68,4 +68,15 @@ describe '#Artist' do
     end
   end
   
+  describe('#delete') do
+  it("deletes an artist by id") do
+    artist = Artist.new("Gwar", @stage.id, nil)
+      artist.save()
+      artist2 = Artist.new("The Baby Lottery", @stage.id, nil)
+      artist2.save()
+      artist.delete()
+      expect(Artist.all).to(eq([artist2]))
+    end
+  end
+  
 end
