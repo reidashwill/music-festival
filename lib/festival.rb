@@ -40,4 +40,19 @@ class Stage
     @@stages.delete(self.id)
   end
 
+  # # def self.search(name)
+  # #   self.all.select{| album | album.name.include?(name.downcase)}
+  # # end
+
+  # def self.search(name)
+  #   album_names = Album.all.map {|a| a.name }
+  #   result = []
+  #   names = album_names.grep(/#{name}/)
+  #   names.each do |n| 
+  #     display_albums = Album.all.select {|a| a.name == n}
+  #     result.push(display_albums)
+  #   end
+  #   result
+  # end
+
 end
