@@ -30,7 +30,7 @@ class Artist
   def update(name, stage_id)
     self.name = name
     self.stage_id = stage_id
-    @@artists[self.id = Artist.new(self.name, self.stage_id, id)]
+    @@artists[self.id] = Artist.new(self.name, self.stage_id, id)
   end
 
   def delete

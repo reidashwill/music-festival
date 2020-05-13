@@ -59,5 +59,13 @@ describe '#Artist' do
     end
   end
 
+  describe("#update") do
+    it("updates an artist by id") do
+      artist = Artist.new("Gwar", @stage.id, nil)
+      artist.save()
+      artist.update("Undergang", @stage.id)
+      expect(artist.name).to(eq("Undergang"))
+    end
+  end
   
 end
