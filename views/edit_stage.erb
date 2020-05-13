@@ -1,0 +1,18 @@
+<h1>Update <%= @stage.name() %></h1>
+
+<form action="/stages/<%= @stage.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <input id="name" name="name" type="text" placeholder="Rename Stage">
+
+  <button type="submit" class="btn btn-danger">Update!</button>
+ </form>
+
+ <p><a href="/albums">Return to festival main page.</a></p>
+
+
+<form action="/stages/<%= @stage.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit" class = "btn btn-danger">Tear Stage Down</button>
+</form>
