@@ -24,4 +24,16 @@ end
     end
   end
 
+  describe('.clear') do
+    it("clears all stages") do
+      stage = Stage.new("west stage", nil)
+      stage.save()
+      stage2 =Stage.new("north stage", nil)
+      stage2.save()
+      Stage.clear()
+      expect(Stage.all).to(eq([]))
+    end 
+  end
+ 
+
 end
