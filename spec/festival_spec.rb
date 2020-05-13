@@ -64,5 +64,15 @@ end
     end
   end
  
+  describe("#delete") do
+    it("deletes a stage by id") do
+      stage = Stage.new("west stage", nil)
+      stage.save()
+      stage2 =Stage.new("north stage", nil)
+      stage2.save()
+      stage.delete()
+      expect(Stage.all).to(eq([stage2]))
+    end
+  end
 
 end
