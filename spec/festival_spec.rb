@@ -44,6 +44,15 @@ end
       expect(stage1).to(eq(stage2))
     end
   end
+  
+  describe("#update") do
+    it("updates a stage by id") do
+      stage = Stage.new("west stage", nil)
+      stage.save()
+      stage.update("south stage")
+      expect(stage.name).to(eq("south stage"))
+    end
+  end
  
 
 end

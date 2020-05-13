@@ -27,5 +27,9 @@ class Stage
     @@total_rows = 0
   end
 
-  def
+  def update(name)
+    self.name = name
+    @@stages[self.id] = Stage.new(self.name, self.id)
+  end
+
 end
