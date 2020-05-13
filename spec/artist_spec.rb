@@ -93,4 +93,13 @@ describe '#Artist' do
     end
   end
 
+  describe("#stage") do
+    it("finds the stage an artist belongs to") do
+      artist = Artist.new("Gwar", @stage.id, nil)
+      artist.save()
+      expect(artist.stage()).to(eq(@stage))
+    end
+  end
+
+  
 end
