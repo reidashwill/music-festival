@@ -40,4 +40,24 @@ describe '#Artist' do
       expect(Artist.all).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it("saves a artist") do
+      artist = Artist.new("Gwar", @stage.id, nil)
+      artist.save()
+      expect(Artist.all).to(eq([artist]))
+    end
+  end
+
+  describe(".find") do
+    it("finds a song by id") do
+      artist = Artist.new("Gwar", @stage.id, nil)
+      artist.save()
+      artist2 = Artist.new("The Baby Lottery", @stage.id, nil)
+      artist2.save()
+      expect(Artist.find(artist.id)).to(eq(artist))
+    end
+  end
+
+  
 end
