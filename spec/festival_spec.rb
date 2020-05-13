@@ -34,6 +34,16 @@ end
       expect(Stage.all).to(eq([]))
     end 
   end
+
+  describe('#==') do
+    it("is the same stage if it has the same attributes as another stage") do
+      stage1 = Stage.new("east stage", nil)
+      stage1.save()
+      stage2 = Stage.new("east stage", nil)
+      stage2.save()
+      expect(stage1).to(eq(stage2))
+    end
+  end
  
 
 end

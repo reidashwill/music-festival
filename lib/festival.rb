@@ -25,5 +25,7 @@ class Stage
   def self.clear
     @@stages = {}
     @@total_rows = 0
-  end  
+  end
+
+  def
 end
