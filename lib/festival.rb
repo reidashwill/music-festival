@@ -32,4 +32,8 @@ class Stage
     @@stages[self.id] = Stage.new(self.name, self.id)
   end
 
+  def self.find(id)
+    @@stages[id]
+  end
+
 end
