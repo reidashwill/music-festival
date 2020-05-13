@@ -1,3 +1,4 @@
+
 class Stage
 
   attr_reader :id
@@ -39,6 +40,10 @@ class Stage
   def delete
     @@stages.delete(self.id)
   end
+
+  def artists
+    Artist.find_by_stage(self.id)
+  end  
 
   # # def self.search(name)
   # #   self.all.select{| album | album.name.include?(name.downcase)}
